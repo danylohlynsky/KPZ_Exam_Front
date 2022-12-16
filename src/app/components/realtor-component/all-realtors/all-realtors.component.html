@@ -1,0 +1,25 @@
+<div>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th colspan="3">Actions</th>
+    </tr>
+
+    <tr *ngFor="let realtor of realtors">
+      <td>{{realtor?.id}}</td>
+      <td>{{realtor?.firstName}}</td>
+      <td>{{realtor?.lastName}}</td>
+      <td>
+        <a routerLink='/realtor-details/{{realtor?.id}}' routerLinkActive="active">Realtor info</a>
+      </td>
+      <td>
+        <a routerLink="/update-realtor/{{realtor?.id}}" routerLinkActive="active">Edit realtor</a>
+      </td>
+      <td>
+        <a routerLink="/delete-realtor/{{realtor?.id}}" routerLinkActive="active">Delete realtor</a>
+      </td>
+    </tr>
+  </table>
+</div>

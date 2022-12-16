@@ -1,0 +1,18 @@
+<div>
+  <div>
+    <label>Id: {{realtor?.id}} </label>
+  </div>
+  <div>
+    <label>First name: </label>
+    <input value="{{realtor?.firstName}}" [(ngModel)]="updatedRealtor.firstName" />
+  </div>
+  <div>
+    <label>Last name: </label>
+    <input value="{{realtor?.lastName}}" [(ngModel)]="updatedRealtor.lastName" />
+  </div>
+
+  <div>
+    <button (click)="editRealtor()">Update</button>
+  </div>
+</div>
+
